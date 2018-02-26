@@ -1,6 +1,6 @@
 # beerboard-fp
 
-> Front page for bierbord.nl
+Front page for bierbord.nl, utilizing primairly flexbox, for production vue is not used.
 
 ## Build Setup
 
