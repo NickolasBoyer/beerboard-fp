@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import PlansTile from './components/PlansTile'
-import TextSection from './components/TextSection'
+import PlansTile from './components/AppPlansTile'
+import TextSection from './components/AppTextSection'
 
 export default {
   name: 'app',
