@@ -125,15 +125,16 @@ export default {
   font-size: 18px;
   border: none;
   border-radius: 8px;
-  transition: all linear 0.3s;
-  margin: 2px 0px; /* to make toom for the hover grow */
+  transition: all linear 0.1s;
+  margin: 1px 0px; /* to make toom for the hover grow */
 }
 
 .tile__section__button:hover {
-  width: 154px; /* +2 on either side */
-  height: 34px; /* +2 on either side */
+  width: 152px; /* +2 on either side */
+  height: 32px; /* +2 on either side */
   margin: 0px; /* to make toom for the hover grow */
-  font-size: 20px;
+  font-size: 19px;
+  background-image: linear-gradient(-135deg, #738FF9 0%, #48E2E4 100%);
 }
 
 .tile__border {
