@@ -8,7 +8,9 @@
         </div>
         <i class="header__subtitle">{{subtitle}}</i>
       </header>
-      <section>
+      <section class="demo-section">
+        <b class="demo-section__text">Check out our demo <a href="#" @click="goToDemo">here!</a></b>
+      </section>
         <plans-tile></plans-tile>
       </section>
       <text-section v-for="text in infoTexts" :textData="text" :key="text.title">
@@ -35,6 +37,11 @@ export default {
         title: 'What even is this?',
         text: 'Blah blah cool intro more text ladadahdidah Blah blah cool intro more text ladadahdidah Blah blah cool intro more text ladadahdidah Blah blah cool intro more text ladadahdidah Blah blah cool intro more text ladadahdidah Blah blah cool intro more text ladadahdidah'
       }]
+    }
+  },
+  methods: {
+    goToDemo () {
+      window.location = "https://bierbord.nl"
     }
   }
 }
@@ -85,5 +92,38 @@ main > * {
 
 .header__subtitle {
   opacity: 0.71;
+}
+
+.demo-section {
+  margin: 0px;
+}
+
+.demo-section__text a{
+  /* remove the default underline */
+  text-decoration: none;
+  /* so the after pseudo can be positioned */
+  position: relative;
+  /* no blue/purple link color */
+  color: inherit;
+}
+
+.demo-section__text a::after{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(-124deg, #EE1D1D 0%, #E38222 100%);
+}
+
+.demo-section__text a:active::after{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(-124deg, #fff 0%, #E38222 100%);
 }
 </style>
